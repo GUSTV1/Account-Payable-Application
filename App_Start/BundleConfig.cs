@@ -23,8 +23,7 @@ namespace Account_Payable_Application
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/myTheme.css",
-                      "~/Content/site.css"));
+                      "~/Content/myTheme.css"));
         }
     }
 }
