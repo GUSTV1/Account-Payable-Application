@@ -146,6 +146,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>APModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Notification.cs">
+      <DependentUpon>APModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Role.cs">
       <DependentUpon>APModel.tt</DependentUpon>
     </Compile>

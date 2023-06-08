@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="AccountPayableDBModel.Role" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="AccountPayableDBModel.User" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="AccountPayableDBModel.FK__Users__Roles__267ABA7A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.Notification" Width="1.5" PointX="3" PointY="4.375" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__Notificat__RoleI__36B12243" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
