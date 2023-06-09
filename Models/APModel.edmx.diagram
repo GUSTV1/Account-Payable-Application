@@ -4,13 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="53c4e2f39168487b8fd0c42fa4a5f3f2" Name="Diagram1">
+      <Diagram DiagramId="53c4e2f39168487b8fd0c42fa4a5f3f2" Name="Diagram1" ZoomLevel="71">
         <EntityTypeShape EntityType="AccountPayableDBModel.Role" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountPayableDBModel.User" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="AccountPayableDBModel.FK__Users__Roles__267ABA7A" ManuallyRouted="false" />
         <EntityTypeShape EntityType="AccountPayableDBModel.Notification" Width="1.5" PointX="3" PointY="4.375" />
         <AssociationConnector Association="AccountPayableDBModel.FK__Notificat__RoleI__36B12243" />
-      </Diagram>
+        <EntityTypeShape EntityType="AccountPayableDBModel.Invoice" Width="1.5" PointX="8" PointY="4.25" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.Item" Width="1.5" PointX="5.625" PointY="2.25" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.Payment" Width="1.5" PointX="10.25" PointY="9.25" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.ProcessStatu" Width="1.5" PointX="10.25" PointY="4.25" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.SystemVariable" Width="1.5" PointX="5.875" PointY="7.625" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.Vendor" Width="1.5" PointX="5.75" PointY="4.375" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__Invoice__ItemsID__5CD6CB2B" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__Invoice__VendorI__5BE2A6F2" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__Payment__Invoice__66603565" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__ProcessSt__Invoi__619B8048" />
+        <EntityTypeShape EntityType="AccountPayableDBModel.User" Width="1.5" PointX="10.625" PointY="0.5" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__ProcessSt__AP_Us__5FB337D6" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__ProcessSt__FD_Us__60A75C0F" />
+        <AssociationConnector Association="AccountPayableDBModel.FK__Users__Roles__5535A963" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

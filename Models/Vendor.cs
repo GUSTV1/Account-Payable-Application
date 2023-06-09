@@ -12,24 +12,24 @@ namespace Account_Payable_Application.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Vendor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Vendor()
         {
-            this.ProcessStatus = new HashSet<ProcessStatu>();
-            this.ProcessStatus1 = new HashSet<ProcessStatu>();
+            this.Invoices = new HashSet<Invoice>();
         }
     
         public int ID { get; set; }
+        public string Company_Name { get; set; }
+        public string Company_Address { get; set; }
+        public string Tax_Identification { get; set; }
+        public string Contact { get; set; }
         public string Email { get; set; }
-        public string Pass { get; set; }
-        public int Roles { get; set; }
+        public string Phone { get; set; }
+        public string Payment_Preference { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProcessStatu> ProcessStatus { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProcessStatu> ProcessStatus1 { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

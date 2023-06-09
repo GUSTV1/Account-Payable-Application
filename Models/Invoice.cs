@@ -12,24 +12,27 @@ namespace Account_Payable_Application.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Invoice
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Invoice()
         {
+            this.Payments = new HashSet<Payment>();
             this.ProcessStatus = new HashSet<ProcessStatu>();
-            this.ProcessStatus1 = new HashSet<ProcessStatu>();
         }
     
         public int ID { get; set; }
-        public string Email { get; set; }
-        public string Pass { get; set; }
-        public int Roles { get; set; }
+        public System.DateTime SentDate { get; set; }
+        public System.DateTime Payment_Term { get; set; }
+        public double Total { get; set; }
+        public int VendorID { get; set; }
+        public int ItemsID { get; set; }
     
+        public virtual Item Item { get; set; }
+        public virtual Vendor Vendor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Payment> Payments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProcessStatu> ProcessStatus { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProcessStatu> ProcessStatus1 { get; set; }
-        public virtual Role Role { get; set; }
     }
 }

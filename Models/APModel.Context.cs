@@ -26,7 +26,13 @@ namespace Account_Payable_Application.Models
         }
     
         public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<ProcessStatu> ProcessStatus { get; set; }
+        public virtual DbSet<SystemVariable> SystemVariables { get; set; }
+        public virtual DbSet<Vendor> Vendors { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
